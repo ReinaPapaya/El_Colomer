@@ -1,3 +1,4 @@
+// backend/index.js (fragmento inicial actualizado)
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
@@ -10,9 +11,43 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: '*' } });
 
+// --- Configuración de rutas absolutas ---
+// __dirname en ES Modules se obtiene así:
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Ruta absoluta al directorio frontend (hermano de backend)
+const frontendPath = path.resolve(__dirname, '../frontend');
+const publicPath = path.join(__dirname, 'public');
+const dataPath = path.join(__dirname, 'data');
+const uploadsPath = path.join(publicPath, 'uploads');
+const logFilePath = path.join(dataPath, 'acciones.log');
+const respuestasFilePath = path.join(dataPath, 'respuestas.json');
+
+console.log('Directorios calculados:');
+console.log('  __dirname (backend):', __dirname);
+console.log('  frontendPath:', frontendPath);
+console.log('  publicPath:', publicPath);
+console.log('  dataPath:', dataPath);
+console.log('  uploadsPath:', uploadsPath);
+
+// Verificar existencia de frontend
+if (!fs.existsSync(frontendPath)) {
+  console.error(`❌ ERROR CRÍTICO: El directorio frontend no existe en ${frontendPath}`);
+  // Opcional: Crear un index.html básico para diagnóstico
+  // fs.mkdirSync(frontendPath, { recursive: true });
+  // fs.writeFileSync(path.join(frontendPath, 'index.html'), '<h1>Error: Frontend no encontrado</h1>');
+} else {
+  console.log(`✅ Directorio frontend encontrado: ${frontendPath}`);
+  const frontendFiles = fs.readdirSync(frontendPath);
+  console.log(`   Contenido:`, frontendFiles);
+}
+
 // Configuración de multer para subida de archivos
 const storage = multer.diskStorage({
-  destination: './public/uploads/',
+  destination: uploadsPath,
   filename: function (req, file, cb) {
     cb(null, 'logo' + path.extname(file.originalname));
   }
@@ -21,26 +56,52 @@ const upload = multer({ storage: storage });
 
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
-app.use(express.static('../frontend'));
-app.use('/supervisor', express.static('public'));
+
+// --- Servir archivos estáticos ---
+// Servir frontend en la raíz
+app.use(express.static(frontendPath));
+// Servir archivos del supervisor
+app.use('/supervisor', express.static(publicPath));
 
 // Crear directorios si no existen
-if (!fs.existsSync('./data')) fs.mkdirSync('./data');
-if (!fs.existsSync('./public/uploads')) fs.mkdirSync('./public/uploads', { recursive: true });
+if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
+if (!fs.existsSync(uploadsPath)) fs.mkdirSync(uploadsPath, { recursive: true });
 
 // Inicializar archivos si no existen
-const logFile = './data/acciones.log';
-const respuestasFile = './data/respuestas.json';
-if (!fs.existsSync(logFile)) fs.writeFileSync(logFile, '');
-if (!fs.existsSync(respuestasFile)) fs.writeFileSync(respuestasFile, '[]');
+if (!fs.existsSync(logFilePath)) fs.writeFileSync(logFilePath, '');
+if (!fs.existsSync(respuestasFilePath)) fs.writeFileSync(respuestasFilePath, '[]');
+
+// --- Ruta raíz explícita ---
+app.get('/', (req, res) => {
+  console.log('Solicitud GET a /');
+  const indexPath = path.join(frontendPath, 'index.html');
+  console.log(`Intentando servir: ${indexPath}`);
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      console.error('Error al servir index.html:', err);
+      if (err.code === 'ENOENT') {
+        res.status(404).send(`
+          <h1>404 - index.html no encontrado</h1>
+          <p>Se esperaba en: ${indexPath}</p>
+          <p>Directorio frontend (${frontendPath}):</p>
+          <pre>${fs.existsSync(frontendPath) ? fs.readdirSync(frontendPath).join('\n') : 'Directorio no existe'}</pre>
+        `);
+      } else {
+        res.status(500).send('Error interno del servidor.');
+      }
+    }
+  });
+});
 
 // --- Funciones de logging ---
 function logAccion(accion, detalles = {}) {
   const timestamp = new Date().toISOString();
   const logEntry = `${timestamp} | ${accion} | ${JSON.stringify(detalles)}\n`;
-  fs.appendFileSync(logFile, logEntry);
+  fs.appendFileSync(logFilePath, logEntry);
   io.emit('logUpdate', { timestamp, accion, detalles }); // Emitir a supervisores
 }
+
+// ... (resto del archivo index.js sin cambios) ...
 
 // --- Endpoints ---
 // 1. Descargar pack actual
