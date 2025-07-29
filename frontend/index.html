@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <title>Trivia Musical – Jugador</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Trivia Musical 90s</h1>
+  <div id="statusText">Esperando al supervisor…</div>
+  <form id="joinForm">
+    <label>Nombre del equipo
+      <input id="teamName" required maxlength="40">
+    </label>
+    <button>Entrar</button>
+  </form>
+
+  <section id="gameArea" style="display:none">
+    <h2 id="questionText"></h2>
+    <div id="answerSlots"></div>
+    <div id="timer"></div>
+    <button id="sendBtn">Enviar respuesta</button>
+  </section>
+
+  <section id="history" style="display:none">
+    <h3>Tu historial</h3>
+    <ul id="historyList"></ul>
+  </section>
+  <script type="module" src="js/player.js"></script>
+</body>
+</html>

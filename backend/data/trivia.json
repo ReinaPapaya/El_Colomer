@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "titulo": "Música de los 90 - Todo en Uno",
+    "pinSupervisor": 1234,
+    "bonus": true
+  },
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'La fuerza del destino'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Mecano",
+          "La fuerza del destino"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "tipo": "test",
+      "texto": "¿Qué banda lanzó el álbum 'Nevermind' en 1991?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Banda",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Pearl Jam",
+        "Nirvana",
+        "Soundgarden",
+        "Alice in Chains"
+      ],
+      "respuestas": [
+        [
+          "Nirvana"
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Wonderwall'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Oasis",
+          "Wonderwall"
+        ]
+      ]
+    }
+  ]
+}

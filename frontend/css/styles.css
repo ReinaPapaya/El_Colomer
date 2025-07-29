@@ -1,0 +1,7 @@
+/* Tema claro + neón */
+:root { --bg:#fafafa; --fg:#111; --neon:#ff00ff; font-family:'Courier New',monospace; }
+body { background:var(--bg); color:var(--fg); margin:2rem; }
+h1 { color:var(--neon); text-shadow:0 0 5px var(--neon); }
+button,input { padding:.5rem; font-size:1rem; border:2px solid var(--neon); border-radius:4px; }
+button { background:var(--neon); color:#fff; cursor:pointer; }
+table { border-collapse:collapse; width:100%; margin-top:1rem; } th,td { border:1px solid var(--neon); padding:.5rem; }
