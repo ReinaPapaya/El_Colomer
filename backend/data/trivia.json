@@ -2,6 +2,7 @@
   "meta": {
     "titulo": "Música de los 90 - Todo en Uno",
     "pinSupervisor": 1234,
+    "pinValidador": 5678,
     "bonus": true
   },
   "preguntas": [
@@ -47,6 +48,501 @@
       "respuestas": [
         [
           "Nirvana"
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "tipo": "texto",
+      "texto": "Artista y título: 'What Is Love'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Haddaway",
+          "What Is Love"
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "tipo": "test",
+      "texto": "¿Qué cantante español lanzó en 1997 el disco 'Más'?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Cantante",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Enrique Iglesias",
+        "Alejandro Sanz",
+        "David Bisbal",
+        "Pablo Alborán"
+      ],
+      "respuestas": [
+        [
+          "Alejandro Sanz"
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Smells Like Teen Spirit'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Nirvana",
+          "Smells Like Teen Spirit"
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "tipo": "test",
+      "texto": "¿Cuál fue el primer gran éxito internacional de La Oreja de Van Gogh?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Título",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "La playa",
+        "Puedes contar conmigo",
+        "Rosas",
+        "Deseos de cosas imposibles"
+      ],
+      "respuestas": [
+        [
+          "La playa"
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Creep'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Radiohead",
+          "Creep"
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "tipo": "test",
+      "texto": "¿Qué vocalista de Pearl Jam aparece en el tema 'Black'?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Vocalista",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Chris Cornell",
+        "Eddie Vedder",
+        "Scott Weiland",
+        "Layne Staley"
+      ],
+      "respuestas": [
+        [
+          "Eddie Vedder"
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "tipo": "texto",
+      "texto": "Artista y título: 'Rhythm Is a Dancer'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Snap!",
+          "Rhythm Is a Dancer"
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "tipo": "test",
+      "texto": "¿En qué año salió el álbum 'OK Computer' de Radiohead?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Año",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "1995",
+        "1996",
+        "1997",
+        "1998"
+      ],
+      "respuestas": [
+        [
+          "1997"
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Corazón partío'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Alejandro Sanz",
+          "Corazón partío"
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "tipo": "test",
+      "texto": "¿Qué canción de Tam Tam Go incluye la frase 'Qué bonita la vida cuando suena'?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Título",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Atrapados en la red",
+        "Espaldas mojadas",
+        "Qué bonita la vida",
+        "Manuel Raquel"
+      ],
+      "respuestas": [
+        [
+          "Espaldas mojadas"
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "tipo": "texto",
+      "texto": "Artista y título: 'Ojos así'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Shakira",
+          "Ojos así"
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "tipo": "test",
+      "texto": "¿Qué grupo lanzó 'Gasolina' en 2004?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Don Omar",
+        "Daddy Yankee",
+        "Wisin & Yandel",
+        "Tego Calderón"
+      ],
+      "respuestas": [
+        [
+          "Daddy Yankee"
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Vivir lo nuestro'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "La India & Marc Anthony",
+          "Vivir lo nuestro"
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "tipo": "test",
+      "texto": "¿Qué baladista lanzó 'Livin' la Vida Loca' en 1999?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Enrique Iglesias",
+        "Ricky Martin",
+        "Chayanne",
+        "Luis Miguel"
+      ],
+      "respuestas": [
+        [
+          "Ricky Martin"
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Enter Sandman'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Metallica",
+          "Enter Sandman"
+        ]
+      ]
+    },
+    {
+      "id": 18,
+      "tipo": "test",
+      "texto": "¿Qué banda británica lanzó 'Bittersweet Symphony' en 1997?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Banda",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Blur",
+        "Oasis",
+        "The Verve",
+        "Radiohead"
+      ],
+      "respuestas": [
+        [
+          "The Verve"
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "tipo": "texto",
+      "texto": "Artista y título: 'Rayando el sol'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "Mecano",
+          "Rayando el sol"
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "tipo": "test",
+      "texto": "¿En qué año salió 'Macarena' de Los del Río?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Año",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "1993",
+        "1994",
+        "1995",
+        "1996"
+      ],
+      "respuestas": [
+        [
+          "1995"
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "tipo": "texto",
+      "texto": "Grupo y título: 'Losing My Religion'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "R.E.M.",
+          "Losing My Religion"
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "tipo": "test",
+      "texto": "¿Qué grupo español cantó 'La chica de ayer'?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Grupo",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Hombres G",
+        "Duncan Dhu",
+        "Ella baila sola",
+        "Nacha Pop"
+      ],
+      "respuestas": [
+        [
+          "Nacha Pop"
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "tipo": "texto",
+      "texto": "Artista y título: 'No Scrubs'",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Artista",
+          "valor": 1
+        },
+        {
+          "campo": "Título",
+          "valor": 1
+        }
+      ],
+      "respuestas": [
+        [
+          "TLC",
+          "No Scrubs"
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "tipo": "test",
+      "texto": "¿Qué tema de Corona suena: 'This is the rhythm of the night'?",
+      "tiempo": 30,
+      "items": [
+        {
+          "campo": "Título",
+          "valor": 3
+        }
+      ],
+      "opciones": [
+        "Baby Baby",
+        "The Rhythm of the Night",
+        "Try Me Out",
+        "I Don't Wanna Be a Star"
+      ],
+      "respuestas": [
+        [
+          "The Rhythm of the Night"
         ]
       ]
     },

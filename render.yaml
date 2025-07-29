@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: trivia-live
+    name: El-Colomer
     env: node
     rootDir: backend
     buildCommand: npm install

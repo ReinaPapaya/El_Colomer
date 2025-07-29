@@ -2,30 +2,55 @@
 <html lang="es">
 <head>
   <meta charset="utf-8"/>
-  <title>Trivia Musical – Jugador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Colomer - Jugador</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Trivia Musical 90s</h1>
-  <div id="statusText">Esperando al supervisor…</div>
-  <form id="joinForm">
-    <label>Nombre del equipo
-      <input id="teamName" required maxlength="40">
-    </label>
-    <button>Entrar</button>
-  </form>
-
-  <section id="gameArea" style="display:none">
-    <h2 id="questionText"></h2>
-    <div id="answerSlots"></div>
-    <div id="timer"></div>
-    <button id="sendBtn">Enviar respuesta</button>
-  </section>
-
-  <section id="history" style="display:none">
-    <h3>Tu historial</h3>
-    <ul id="historyList"></ul>
-  </section>
+  <div id="app">
+    <header>
+      <h1>El Colomer</h1>
+      <div id="event-logo"></div>
+    </header>
+    
+    <main>
+      <section id="joinSection">
+        <h2>Unirse al Juego</h2>
+        <form id="joinForm">
+          <div class="form-group">
+            <label for="teamName">Nombre del equipo</label>
+            <input id="teamName" required maxlength="40" placeholder="Ej: Los Rockeros">
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+      </section>
+      
+      <section id="rulesSection" style="display:none">
+        <h2>Reglas del Juego</h2>
+        <div id="rulesContent"></div>
+        <button id="acceptRules">Aceptar y Continuar</button>
+      </section>
+      
+      <section id="gameSection" style="display:none">
+        <div id="publishedQuestions"></div>
+        <div id="currentQuestion">
+          <h2 id="questionText"></h2>
+          <div id="answerSlots"></div>
+          <div id="timer">
+            <span>Tiempo restante: </span>
+            <span id="timeLeft">0</span>s
+          </div>
+          <button id="sendBtn" disabled>Enviar respuesta</button>
+        </div>
+      </section>
+      
+      <section id="historySection" style="display:none">
+        <h2>Tu historial</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+  </div>
+  
   <script type="module" src="js/player.js"></script>
 </body>
 </html>

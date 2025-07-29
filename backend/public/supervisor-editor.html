@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Colomer - Editor</title>
+  <link rel="stylesheet" href="css/supervisor.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔧 Panel del Editor</h1>
+      <div class="auth-status">No autenticado</div>
+    </header>
+    
+    <main>
+      <section class="auth-section">
+        <h2>Autenticación</h2>
+        <div class="form-group">
+          <label for="pin">PIN de Supervisor</label>
+          <input type="password" id="pin" placeholder="****">
+          <button id="authBtn">Autenticar</button>
+        </div>
+      </section>
+      
+      <section class="editor-section" style="display:none">
+        <h2>📁 Gestión de Contenido</h2>
+        
+        <div class="card">
+          <h3>⬆️ Cargar Pack de Preguntas</h3>
+          <div class="form-group">
+            <input type="file" id="packFile" accept=".json">
+            <button id="uploadPackBtn">Cargar Pack</button>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>📝 Cargar Reglas</h3>
+          <div class="form-group">
+            <input type="file" id="rulesFile" accept=".md,.txt">
+            <button id="uploadRulesBtn">Cargar Reglas</button>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>🎨 Cargar Logo del Evento</h3>
+          <div class="form-group">
+            <input type="file" id="logoFile" accept="image/*">
+            <button id="uploadLogoBtn">Cargar Logo</button>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>💾 Descargar Datos</h3>
+          <div class="button-group">
+            <button id="downloadResponsesBtn">Descargar Respuestas</button>
+            <button id="downloadLogBtn">Descargar Log</button>
+            <button id="downloadRankingBtn">Descargar Ranking</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="js/supervisor-editor.js"></script>
+</body>
+</html>

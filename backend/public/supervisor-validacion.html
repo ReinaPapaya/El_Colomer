@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Colomer - Validador</title>
+  <link rel="stylesheet" href="css/supervisor.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✅ Panel del Validador</h1>
+      <div class="auth-status">No autenticado</div>
+    </header>
+    
+    <main>
+      <section class="auth-section">
+        <h2>Autenticación</h2>
+        <div class="form-group">
+          <label for="pin">PIN de Validador</label>
+          <input type="password" id="pin" placeholder="****">
+          <button id="authBtn">Autenticar</button>
+        </div>
+      </section>
+      
+      <section class="validation-section" style="display:none">
+        <h2>🔍 Validación de Respuestas</h2>
+        
+        <div class="card">
+          <h3>💬 Respuestas Recibidas</h3>
+          <div id="answersContainer"></div>
+        </div>
+        
+        <div class="card">
+          <h3>🏆 Ranking Actual</h3>
+          <table id="rankingTable">
+            <thead>
+              <tr>
+                <th>Equipo</th>
+                <th>Puntos</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        
+        <div class="card">
+          <h3>📝 Log de Actividad</h3>
+          <div id="logContainer"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="js/supervisor-validacion.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "name": "trivia-backend",
+  "name": "el-colomer-backend",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "socket.io": "^4.7.2",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1"
   }
 }
